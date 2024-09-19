@@ -1,0 +1,17 @@
+/*global css*/
+*{ font: size 30px;font-weight: 500 ;}
+/*external css*/
+h3{ color: blue;}
+/*element css*/
+h4 {
+    color: rgb(255, 0, 140);
+/*my class*/
+.myclass
+{color: aquamarine;}
+/*my id*/
+#myid{
+    color: brown;
+}
+/* group selector*/
+h5,p {
+color:yellow;}
