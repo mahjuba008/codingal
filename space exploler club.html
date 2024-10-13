@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>advanced selector ,pseudo classes and pseudo elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: yellow;
+            color: black;
+        }
+
+        h1 {
+            color: #58a6ff;
+
+
+        }
+
+        /*attribute selector*/
+        a {
+            color: #281bd8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        /*child selector*/
+        ul>li {
+            background-color: beige;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        h1+p {
+
+            background-color: #161B22;
+
+            padding: 10px;
+
+            border-radius: 5px;
+        }
+
+        /* : hover pseudo-class*/
+        ul li:hover {
+            color: #4F8CC9;
+        }
+
+        /* nth-child(n) Pseudo-class */
+
+        li:nth-child(4n) {
+
+            color: #FF0ACC;
+
+        }
+
+        ul li:nth-child(3) {
+
+            background-color: #21262D;
+            color: aliceblue;
+
+        }
+
+        /* :not(selector) Pseudo-class */
+
+        p:not(:first-of-type) {
+
+            text-decoration: underline;
+
+        }
+
+        ul li::before {
+
+            content: "🚀";
+
+        }
+
+        a::after {
+
+            content: "📌"
+
+        }
+
+        p::first-letter {
+
+            font-size: 200%;
+
+            color: #ff7b72;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WELCOME TO THE SPACE EXPLORERS CLUB</h1>
+    <ul>
+        <li>Moon Missions</li>
+        <li>Mars Rovers</li>
+        <li>international space station</li>
+        <li>telescope and stars</li>
+        <li>black holes mysterious</li>
+    </ul>
+    <p>space exploration has always captivated human imagination.it's journey to the unknown.</p>
+    <p>from the moon to the distant galaxies,we continue to explore the vastness of space</p>
+    <a href="">join our mission</a>
+    <br><a href="">latest space news</a><br><a href="">gallery of the universe</a>
+</body>
+
+</html>
