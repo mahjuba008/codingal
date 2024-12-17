@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>advanced selector ,pseudo classes and pseudo elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(236, 222, 198);
+            color: black;
+            text-decoration: underline;
+        }
+
+        h1 {
+            color: black;
+
+        }
+
+        /*attribute selector*/
+        a {
+            color: #281bd8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #1bd87d;
+        }
+
+        /*child selector*/
+        ul>li {
+            background-color: rgb(240, 240, 190);
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        h1+p {
+
+            background-color: #161B22;
+
+            padding: 10px;
+
+            border-radius: 5px;
+        }
+
+        /* : hover pseudo-class*/
+        ul li:hover {
+            color: #281bd8;
+        }
+
+        /* nth-child(n) Pseudo-class */
+
+        li:nth-child(4n) {
+
+            color: blue;
+        }
+
+        ul li:nth-child(3) {
+
+            background-color: #21262D;
+            color: aliceblue;
+
+        }
+
+        /* :not(selector) Pseudo-class */
+
+        p:not(:first-of-type) {
+
+            text-decoration: underline;
+
+        }
+
+        ul li::before {
+
+            content: "";
+
+        }
+
+        a::after {
+
+            content: ""
+
+        }
+
+        p::first-letter {
+
+            font-size: 200%;
+
+            color: #000000;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WELCOME TO SOUTH POINT SCHOOL & COLLAGE</h1>
+    <ul>
+        <li>Enrollment information</li>
+        <li>About us</li>
+        <li>Facebook page</li>
+        <li>Extra-Curricular activity</li>
+        <li>Functions of the school</li>
+    </ul>
+    <p>We offer a wide range of services to support the holistic development of our students. From academic programs to
+        extracurricular activities, we strive to provide a comprehensive educational experience. Our services include:
+    </p><br>
+    <a href="facebook.com/spscbaridhara">join our facebook page</a>
+    <br><a href="https://www.youtube.com/@southpointschoolcollegebar8474">latest news of spsc</a><br>
+
+    <p>A SCHOOL WITH A DIFFERENCES</p>
+
+</body>
+
+</html>
