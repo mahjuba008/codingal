@@ -15,6 +15,18 @@
         document.getElementById("para").innerHTML = icecream[2];
         document.getElementById("para2").innerHTML = icecream[5];
     </script>
+
+    <p id="para"></p>
+    <p id="para2"></p>
+    <p id="para3"></p>
+    <script>
+        var magic = ['m', 'b', 'y', 'z']
+        document.getElementById("para").innerHTML = magic.join("*");
+        document.getElementById("para2").innerHTML = magic;
+        magic.pop();
+        document.getElementById("para3").innerHTML = magic;
+    </script>
+
 </body>
 
 </html>
