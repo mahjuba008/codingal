@@ -30,9 +30,16 @@
 
     <p id="p1"></p>
     <p id="p2"></p>
+    <p id="p3"></p>
     <script>
         function mahjuba(a, b) { return a + b; }
-        document.getElementById("p1").innerHTML = mahjuba(22, -55);
+        document.getElementById("p1").innerHTML = mahjuba(-6, 45);
+
+        function multiply(a, b) { return a * b; }
+        document.getElementById("p2").innerHTML = multiply(16, 2);
+
+        function mod(a, b) { return a % b; }
+        document.getElementById("p3").innerHTML = mod(55, 2);
     </script>
 
 </body>
