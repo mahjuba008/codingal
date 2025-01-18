@@ -22,6 +22,27 @@
         document.write("value of e is....." + e)
         document.write("<br>")
     </script>
+
+
+
+    <p id="hour"></p>
+    <p id="greetings"></p>
+    <button onclick="mahjubastime()">try it!!</button>
+
+    <script>
+        function mahjubastime() {
+            var greetings;
+            var time = new Date().getHours();
+
+            if (time < 10) { greetings = "good morning"; }
+            else if (time < 20) { greetings = "good day"; }
+            else { greetings = "good evening"; }
+            document.getElementById("hour").innerHTML = "current time:" + time;
+            document.getElementById("greetings").innerHTML = greetings;
+        }
+
+
+    </script>
 </body>
 
 </html>
