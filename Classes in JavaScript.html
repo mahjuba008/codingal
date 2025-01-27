@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comments</title>
+</head>
+
+<body>
+    <p id="student1"></p>
+    <p id="student2"></p>
+
+
+
+    <script>
+        class student {
+            constructor(name, birthyear) {
+                this.name = name;
+                this.birthyear = birthyear;
+            }
+
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.birthyear;
+
+            }
+        }
+        student1 = new student("ahona", 2004);
+        document.getElementById("student1").innerHTML = "my name is " + student1.name + '. i was born in' + student1.birthyear + ' . so , my age is ' + student1.age();
+        student2 = new student("humaira", 2007)
+        document.getElementById("student2").innerHTML = "my name is " + student2.name + '. i was born in' + student2.birthyear + ' . so , my age is ' + student2.age();
+    </script>
+</body>
+
+</html>
