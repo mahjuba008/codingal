@@ -10,7 +10,7 @@
 <body>
     <p id="student1"></p>
     <p id="student2"></p>
-
+    <p id="details"></p>
 
 
     <script>
@@ -30,6 +30,26 @@
         document.getElementById("student1").innerHTML = "my name is " + student1.name + '. i was born in' + student1.birthyear + ' . so , my age is ' + student1.age();
         student2 = new student("humaira", 2007)
         document.getElementById("student2").innerHTML = "my name is " + student2.name + '. i was born in' + student2.birthyear + ' . so , my age is ' + student2.age();
+
+        class car {
+            constructor(brand) {
+                this.carname = brand;
+            }
+            prsent() {
+                return 'i have a ' + this.carname;
+            }
+        }
+        class Model extends car {
+            constructor(brand, mod) {
+                super(brand);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ', it is a ' + this.model;
+            }
+        }
+        let myCar = new Model("ford", "mustang");
+        document.getElementById("details").innerHTML = myCar.show();
     </script>
 </body>
 
