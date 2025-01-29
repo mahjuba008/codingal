@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array sorting and mapping in JavaScript</title>
+</head>
+
+<body>
+    <p id="p"></p>
+    <button onclick="ascending()">ascending</button>
+    <button onclick="descending()">descending</button>
+    <script>
+
+        var mahjuba = [3, 6, 45, 9, 107, 849, 434, 7, 23, 847, 8, 7, 4, 78];
+        document.getElementById('p').innerHTML = mahjuba
+        function ascending() {
+            mahjuba.sort(function (a, b) { return a - b });
+            document.getElementById('p').innerHTML = mahjuba;
+        }
+
+        function descending() {
+            mahjuba.sort(function (a, b) { return b - a });
+            document.getElementById('p').innerHTML = mahjuba;
+        }
+    </script>
+</body>
+
+</html>
