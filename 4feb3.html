@@ -8,14 +8,11 @@
 </head>
 
 <body>
-    <p id="error_message"></p>
+    <p id="onee"></p>
+
     <script>
-        try {
-            addalert("welcome guest");
-        }
-        catch (err) {
-            document.getElementById("error_message").innerHTML = err.message;
-        }
+        o = (w, e) => w / e;
+        document.getElementById('onee').innerHTML = o(8, 9);
     </script>
 </body>
 
