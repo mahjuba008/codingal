@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json and JS Asynchronous</title>
+</head>
+
+<body>
+    <p id="1"></p>
+    <script>
+        var myobj = { name: 'mahjuba', age: 13, grade: 10 };
+        var myJSON = JSON.stringify(myobj);
+        var newobj = JSON.parse(myJSON);
+        document.getElementById("1").innerHTML = newobj.name;
+    </script>
+
+
+
+    <h2 id="h2"></h2>
+<script>
+async function add(a,b){
+    let resp=await a+b;
+    display(resp);
+
+}
+function display(s){
+    document.getElementById('h2').innerHTML=s;
+}
+add(28,30);
+</script>
+</body>
+
+</html>
