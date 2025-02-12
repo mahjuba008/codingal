@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <p>give a number then press ok button </p>
+        <input type="number" min="50" max="100" required id="numberinput">
+        <button onclick="functmahju()">ok</button>
+        <p id="motamot"></p>
+        <script>
+            function functmahju() {
+                var rakho = document.getElementById('numberinput');
+                if (!rakho.checkValidity()) {
+                    document.getElementById('motamot').innerHTML = rakho.validationMessage;
+                }
+                else { document.getElementById('motamot').innerHTML = 'ok!!' }
+            }
+        </script>
+    </center>
+</body>
+
+</html
