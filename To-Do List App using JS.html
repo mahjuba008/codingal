@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App using JS
+    </title>
+
+</head>
+
+<body>
+    <h2>to do list by js</h2>
+    <form action="" id="myform">
+        ><input type="text" id="myinput">
+        <button>add</button>
+    </form>
+    <ul id="myitem"></ul>
+    <script>
+        var myform = document.getElementById('myform');
+        myinput = document.getElementById('myinput');
+        myitem = document.getElementById('myitem');
+
+
+        myform.addEventListener("submit", function (event) {
+            event.preventDefault()
+            createItem(myinput.value)
+        })
+        function createItem(inputItems) {
+            var items = `<li>${inputItems}
+            <button onclick="deleteElement(this)">DELETE</button></li>`
+            myitem.insertAdjacentHTML("beforeend", items)
+            myinput.value = ''
+            myinput.focus()
+        }
+        function deleteElement(ElementToDelete) { ElementToDelete.parentElement.remove() }</script>
+</body>
+
+</html>
