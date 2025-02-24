@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preparing shopping list
+    </title>
+    <style>
+        body {
+
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #D9BBAD;
+        }
+
+        button {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f2E6D8;
+            border: black;
+        }
+
+        li {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #e6cfcf;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>preparing shopping list</h2>
+    <form action="" id="myform">
+        ><input type="text" id="myinput">
+        <button>add</button>
+    </form>
+    <ul id="myitem"></ul>
+    <script>
+        var myform = document.getElementById('myform');
+        myinput = document.getElementById('myinput');
+        myitem = document.getElementById('myitem');
+
+
+        myform.addEventListener("submit", function (event) {
+            event.preventDefault()
+            createItem(myinput.value)
+        })
+        function createItem(inputItems) {
+            var items = `<li>${inputItems}
+            <button onclick="deleteElement(this)">Done</button></li>`
+            myitem.insertAdjacentHTML("beforeend", items)
+            myinput.value = ''
+            myinput.focus()
+        }
+        function deleteElement(ElementToDelete) { ElementToDelete.parentElement.remove() }</script>
+</body>
+
+</html>
