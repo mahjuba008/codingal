@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    background-color: #d1dbd4;
+}
+
+#dice {
+    font-size: 320px;
+    background-color: #fdf9ef;
+}
+
+#dice:hover {
+    cursor: pointer;
+}

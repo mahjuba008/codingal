@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop watch
+
+    </title>
+
+</head>
+
+<body>
+    <center>
+        <div>
+            <h1>
+                stop watch
+            </h1>
+            <p>
+                <span id="seconds">00</span> :
+                <span id="miliseconds">00</span>
+            </p>
+            <button id="start">start</button>
+            <button id="stop">stop</button>
+            <button id="reset">reset</button>
+        </div>
+    </center>
+    <script>
+        window.onload = function () {
+            var seconds = 00;
+            var milseconds = 00;
+            var a_sec = document.getElementById('seconds');
+            var a_milsec = document.getElementById('milliseconds');
+            var start = document.getElementById('start');
+            var stop = document.getElementById('stop');
+            var reset = document.getElementById('reset');
+            var interval;
+
+            start.onclick = function () {
+                clearInterval(interval);
+                interval = setInterval(startTimer, 10)
+            }
+            stop.onclick = function () { clearInterval(interval); }
+
+            reset.onclick = function () {
+                clearInterval(interval);
+                milsec = '00';
+                sec = '00';
+                a_milsec.innerHTML = milsec;
+                a_sec.innerHTML = sec;
+            }
+
+            function startTimer() {
+                milsec++;
+                if (milsec <= 9)
+                    (a_milsec.innerHTML = '0' + milsec;)
+                if (milsec > 9)
+                    (a_milsec.innerHTML = milsec;)
+                if (milsec > 99) {
+                    sec++;
+                    a_sec.innerHTML = '0' + sec;
+                    milsec = 0;
+                    a_milsec.innerHTML = '0' + 0;
+                }
+                if (sec > 9) (a_sec.innerhtml = sec;)
+            }
+        }
+    </script>
+</body>
+
+</html>
