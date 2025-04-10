@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <img src="21.jpg" alt="picture" style="height: 400px;" class="myslides">
+        <img src="22.jpg" alt="picture" style="height: 400px;" class="myslides">
+        <img src="11.jpg" alt="picture" style="height: 400px;" class="myslides">
+        <img src="23.jpg" alt="picture" style="height: 400px;" class="myslides">
+
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.
+                getElementsByClassName
+                ('myslides');
+            for (i = 0; i < x.length; i++) { x[i].stlyle.display = 'none'; }
+
+
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1; }
+            x[myIndex - 1].stlyle.
+                display = 'block';
+            setTimeout(carousel, 3000);
+        }
+
+
+    </script>
+    <div class="navbar">
+        <a href="#">HOME</a>
+        <a href="#">GALLERY</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT</a>
+    </div>
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border trans">
+                <img src="21.jpg" alt="">
+            </span>
+            <p>photo</p>
+            <p><img src="23.jpg" alt="23" style="width: 170px;height: 100px;float: right;">
+                Dhaka's roads are often busy and congested, reflecting the city's rapid urban growth and high population
+                density. Major
+                roads like Mirpur Road, Airport Road, and Gulshan Avenue are vital for daily commuting. Despite recent
+                improvements in
+                infrastructure, traffic jams and poor road conditions remain common challenges. Efforts like flyovers
+                and metro rail aim
+                to ease transportation woes.
+            </p><br>
+            <hr>
+            <p>AHSAN MANJIL</p>
+            <p><img src="22.jpg" alt="23" style="width: 150px;height:100px;float:left;">Ahsan Manzil, known as the Pink
+                Palace, is a historic building on the banks of the Buriganga River in Dhaka. Built in
+                the 19th century, it was the residence of the Nawabs of Dhaka. Now a museum, it showcases the rich
+                history and heritage
+                of the city. Its striking pink color and grand architecture make it a popular tourist attraction.
+            </p><br><br>
+            <hr>
+        </div>
+    </div>
+</body>
